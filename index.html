@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+font-family:Arial;
+}
+#navbar {
+display:flex;
+position:fixed;
+top:0;
+width:100%;
+padding:5px 0px 11px 5px;
+border-bottom:1px solid #ccc;
+}
+.back{
+margin-top:10px;
+margin-right:10px;
+font-size:20px !important;
+margin-left:5px !important;
+}
+.img i{
+font-size:38px !important;
+padding-right:10px;
+}
+.prof .name {
+font-size:18px;
+text-align:center;
+}
+.prof .active{
+font-size:12px;
+text-align:center;
+}
+.menu{
+transform:rotate(90deg);
+position:absolute;
+right:30px;
+top:15px;
+font-size:22px;
+}
+.file {
+display:none;
+}
+#writeMessage {
+position:absolute;
+bottom:0px;
+max-width:100%;
+left:0;
+right:0;
+}
+.messages {
+width:100%;
+height:450px;
+position:absolute;
+background-color:#eee;
+top:55px;
+overflow:scroll;
+
+}
+.more{
+width:100%;
+height:33px;
+font-size:17px;
+text-align:center;
+padding-top:12px;
+color:#003;
+border-bottom:1px solid #ccc;
+
+}
+#navbot {
+position:fixed;
+}
+.mes {
+width:75%;
+height:35px;
+bottom:5px;
+right:50px;
+position:fixed;
+font-size:18px;
+}
+.emoji{
+position:fixed;
+padding-top:10px;
+padding-right:5px;
+right:55px;
+bottom:13px;
+font-size:20px;
+color:#727782;
+}
+.like{
+position:fixed;
+right:5px;
+bottom:10px;
+color:#727782;
+
+}
+#send{
+position:fixed;
+right:5px;
+bottom:5px;
+font-size:25px;
+display:none;
+padding:0px 10px;
+}
+#camera {
+left:5px;
+position:fixed;
+bottom:10px;
+}
+.camera{
+font-size:25px !important;
+left:5px;
+position:fixed;
+bottom:10px;
+}
+.date {
+font-size:13px;
+color:#002;
+text-align:center;
+padding-top:10px;
+}
+
+/* right Message */
+
+.chat{
+position:;
+margin-top:20px;
+max-width:70%;
+width:auto;
+background:rgba(40,100,109,0.4);
+height:auto;
+z-index:2;
+margin-left:35%;
+border:none;
+border-radius:10px;
+padding:10px 0px;
+}
+.chat p {
+margin-left:12px;
+position:static;
+font-size:17px;
+}
+/* left messages */
+.cha{
+max-width:70%;
+margin-top:20px;
+width:auto;
+background:rgba(250,207,255,0.4);
+height:auto;
+border:none;
+border-radius:10px;
+padding:10px 0px;
+overflow:auto;
+}
+.cha p {
+position:static;
+margin-left:15px;
+font-size:17px;
+}
+#aler {
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+position:absolute;
+display:none;
+text-align:center;
+}
+#alert {
+font-size:18px;
+padding:0px;
+background:#fff;
+width:80%;
+display:inline-block;
+margin-top:30%;
+}
+#alert ul {
+padding:0px 0px;
+}
+#alert ul li{
+list-style:none;
+padding:15px;
+}
+#alert ul li:hover{
+background-color:grey;
+}
+#alert ul li a {
+
+text-decoration:none;
+color:#000;
+}
+.line{
+border-top:1px solid #8a8a8a;
+border-top-width:100%;
+}
+.pre {
+display:none;
+}
+#back {
+position:absolute;
+width:100%;
+height:100%;
+background:white;
+display:none;
+text-align:center;
+}
+#back p{
+margin-top:40px;
+}
+#back div {
+text-align:left;
+padding:30px;
+margin-right:5px;
+margin-top:50px;
+background:#828;
+width:15%;
+font-size:20px;
+float:right;
+color:#77;
+}
+.non{
+display:none;
+}
+</style>
+<title></title>
+</head>
+<body>
+<div class="container" >
+<div id="navbar" >
+<div class=" fa fa-arrow-left back" onclick="yet()" > 
+</div>
+<div class="img" >
+<i class="fa fa-user-circle fa-2x" ></i>
+</div>
+<div class="prof" >
+<div class="name" > Lana Lana </div>
+<div class="active"> active 4d ago </div>
+</div>
+<div class="menu" >
+<i class="fa fa-ellipsis-h" id="link" onclick="myLink()" > </i>
+</div>
+</div>
+<div class="messages" id="before"  onclick="myDunction()" >
+<div class="more" onclick="more()"> Previous messages </div>
+<div class="pre" id="pre" >
+<div class="date" > Mon 29 </div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+<p> I was very busy that i didn't notice there was a message for me.
+But what was the matter?</p>
+</div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+ <p>
+JavaScript is a cross-platform, object-oriented scripting language. It
+is a small and lightweight language. Inside a host environment (for
+example, a web browser), JavaScript can be connected to the objects of
+its environment to provide programmatic control over them.
+</p>
+</div>
+<div class="date" > Tue 15 </div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+<p> I was very busy that i didn't notice there was a message for me.
+But what was the matter?</p>
+</div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+ <p>
+JavaScript is a cross-platform, object-oriented scripting language. It
+is a small and lightweight language. Inside a host environment (for
+example, a web browser), JavaScript can be connected to the objects of
+its environment to provide programmatic control over them.
+</p>
+</div>
+</div>
+<div class="date" > Fri 24 </div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+<p> I was very busy that i didn't notice there was a message for me.
+But what was the matter?</p>
+</div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+ <p>
+JavaScript is a cross-platform, object-oriented scripting language. It
+is a small and lightweight language. Inside a host environment (for
+example, a web browser), JavaScript can be connected to the objects of
+its environment to provide programmatic control over them.
+</p>
+</div>
+<div class="date" > sat 25 </div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha" >
+<p> I was very busy that i didn't notice there was a message for me.
+But what was the matter?</p>
+</div>
+<div class="chat" >
+<p> I called your number but you didn't pick</p>
+</div>
+<div class="cha"  >
+ <p>
+JavaScript is a cross-platform, object-oriented scripting language. It
+is a small and lightweight language. Inside a host environment (for
+example, a web browser), JavaScript can be connected to the objects of
+its environment to provide programmatic control over them.
+</p>
+</div>
+
+
+
+
+
+</div>
+<div id="navbot" >
+
+<div id="writeMessage" >
+<form onsubmit="post()"> 
+<label for="file" id="camera" >
+<i class="fa fa-camera  camera" ></i>
+</label>
+<input type="file" id="file" class="file"  >
+<textarea placeholder="Type your message"  type="text" class="mes" min="1" max="6000"   onfocus="myFunction()"   id="mss"  ></textarea> 
+<div id="emoji" ><i class="fa fa-smile-o  emoji" ></i> </div>
+<div id="send" onclick="sent()"><i class="fa fa-paper-plane-o  send" ></i></div>
+<i class="fa fa-thumbs-up fa-2x like" id="thumb" onclick="thumb()" ></i>
+</form>
+</div>
+</div>
+</div>
+<div id="aler" onclick="del()" onscroll="del()">
+<div id="alert" >
+<ul>
+<li  > <a href="" >Refresh </a></li>
+<li class="line" > <a href="" >Mark as span </a> </li>
+<li class="line" > <a href="" >Mark as unread </a></li>
+<li class="line" > <a href="" >Delete Convo</a> </li>
+<li class="line" > <a href="" >Add Friends</a> </li>
+</ul>
+</div>
+</div>
+<div id="back" > 
+<p>404 Not Found </p>
+<p> We are currently working on it. </p>
+<p> <b> Thanks for understanding </b></p>
+
+<div onclick="clo()"> Cancel </div>
+</div>
+</body>
+<script type="text/javascript">
+let camera = document.getElementById("camera");
+let like = document.getElementById("thumb");
+let emoji = document.getElementById("emoji");
+let send = document.getElementById("send");
+let message = document.getElementById("mss");
+let mes = document.getElementById("aler");
+let clik = document.getElementById("link");
+let moreMessage = document.getElementById("pre");
+let med = document.getElementById("back");
+let mes1 = document.getElementById("mes1");
+let mess1 = document.getElementById("mess1");
+let nex = document.getElementById("before");
+
+
+function myFunction(){
+camera.style.display = "none";
+like.style.display = "none";
+emoji.style.display = "none";
+send.style.display = "block";
+message.style.width = "85%";
+message.style.right = "1px";
+message.style.left = "1px";
+message.style.bottom = "5px"
+
+
+}
+
+function myDunction(){
+camera.style.display = "block";
+like.style.display = "block";
+emoji.style.display = "block";
+send.style.display = "none";
+message.style.width = "75%";
+message.style.right = "50px";
+message.style.bottom = "5px";
+message.style.left = "40px";
+
+}
+function myLink(){
+
+mes.style.display = "block";
+}
+
+function del(){
+mes.style.display = "none";
+}
+
+function more(){
+moreMessage.style.display = "block";
+}
+function yet(){
+med.style.display = "block";
+}
+function clo(){
+med.style.display = "none";
+}
+function sent() {
+let sen = message.value;
+if (sen.length >= 2){
+var new_txt = document.createElement("div")
+var para = document.createElement("p");
+new_txt.appendChild(para);
+new_txt.setAttribute("class", "chat");
+para.innerHTML = sen;
+nex.appendChild(new_txt);
+message.value = "";
+}
+else{
+new_txt.style.display = "none";
+}
+}
+
+
+function thumb() {
+var new_txt = document.createElement("div")
+new_txt.setAttribute("class", "chat");
+new_txt.style.backgroundColor = "transparent";
+new_txt.style.textAlign = "right";
+new_txt.style.paddingRight = "20px";
+new_txt.style.fontSize = "50px";
+new_txt.innerHTML = "👍";
+nex.appendChild(new_txt);
+}
+</script>
+</html>
